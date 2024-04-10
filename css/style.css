@@ -1,0 +1,214 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+.menu-bar {
+    list-style-type: none;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-bar li {
+    float: left;
+}
+
+.menu-bar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+
+#AboutMe, #Education, #Experience, #Skills {
+    float: left;
+    width: 100%;
+}
+
+#MyCat, #MyInterested, #DongDong, #SaSa {
+    float: right;
+    width: 100%;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#AboutMe, #CatDaily, #Resume {
+    width: 50%;
+    background-color: #FAF0E6;
+    color: #556B2F;
+    border: 1px solid #aaa;
+    box-shadow: 0px 0px 10px #aaa;
+    margin-bottom: 20px;
+}
+
+#AboutMe > header > h2, #CatDaily > header > h2 {
+    color: #ff4500;
+}
+
+
+
+.highlight-section {
+    background-color: linen ;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+
+.section-title {
+    color: #556B2F;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.text-content {
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin-bottom: 10px;
+}
+
+.img-container img {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+@media (max-width: 1024px) {
+    /* Tablet View */
+    .menu-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-bar li {
+        width: 100%;
+        text-align: center;
+    }
+    .menu-bar a {
+        padding: 10px;
+    }
+    #AboutMe, #CatDaily, #Resume {
+        width: 75%;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Mobile View */
+    body {
+        font-size: 14px;
+    }
+    .menu-bar {
+        flex-direction: column;
+    }
+    .menu-bar li {
+        width: 100%;
+    }
+    #AboutMe, #CatDaily, #Resume {
+        width: 100%;
+    }
+}
+
+.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    display: none; /* Hide initially */
+    z-index: 100;
+}
+
+/* Optional: Add styles for hover effect */
+#scrollTopBtn:hover {
+    background-color: #ddd;
+}
+
+.dark-theme {
+    background-color: #333; /* Dark background for the dark theme, matching the menu bar */
+    color: #fff; /* Light text for the dark theme */
+}
+
+.dark-theme .menu-bar {
+    background-color: #555; /* Slightly lighter or different shade for the menu bar in the dark theme */
+    color: #ddd;
+}
+
+.menu-bar #themeToggle {
+    background-color: inherit; /* Use the menu bar's background */
+    color: white; /* Match the text color of the menu items */
+    border: none; /* Remove border */
+    padding: 15px; /* Use the same padding as other menu items for consistency */
+    font-size: 16px; /* Adjust to match the font size of the menu items */
+    cursor: pointer;
+}
+
+/* Hover effect for menu links */
+.menu-bar a:hover {
+    background-color: #555; /* Darken the background on hover */
+    color: #ddd; /* Lighten the text color on hover */
+}
+
+/* Hover effect for the toggle theme button */
+.menu-bar #themeToggle:hover {
+    background-color: #555; /* Match the hover background with the links */
+    color: #ddd; /* Match the hover text color with the links */
+}
+
+
+#map {
+    height: 500px;
+    width: 100%;
+}
+
+
+
+
+
+
+
